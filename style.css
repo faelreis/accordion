@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    list-style: none;
+    color: #101010;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+body {
+    background-color: #e6e6e6;
+    margin: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 124.6rem;
+    margin: 0 auto;
+    padding: 0rem 1.5rem;
+}
+
+
+.accordion{
+    transition: all .5s ease;
+    border: 0.2rem solid #101010;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.accordion .title{
+    padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+.accordion .title h3{
+    font-size: 2.0rem;
+}
+
+.accordion .title .icon{
+    width: 3rem;
+    height: 3rem;
+    border: 0.2rem solid #101010;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion.active .title .icon img{
+    transform: rotate(180deg);
+    transition: all .5s ease;
+}
+
+.accordion .title .icon img{
+    max-width: 1.2rem;
+    transition: all .5s ease;
+}
+
+.accordion p {
+    font-size: 1.6rem;
+    display: none;
+    padding: 1.5rem;
+}
+
+.accordion.active p {
+    display: block;
+    animation: fadeIn .5s forwards;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
